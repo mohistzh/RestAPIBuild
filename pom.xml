@@ -28,6 +28,6 @@
 		</dependency>
 	</dependencies>
 	<modules>
-		<module>../RestAPIWeb</module>
+		<module>RestAPIWeb</module>
 	</modules>
 </project>
