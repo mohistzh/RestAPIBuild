@@ -1,5 +1,8 @@
 package me.jonathan.api.resource;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
@@ -35,5 +38,19 @@ public class AccountResource {
 		return new Account(account.getId(), account.getName(),
 				account.getEmail(), account.getAddress());
 
+	}
+	@GET
+	@Produces(MediaType.APPLICATION_JSON)
+	public List<Account> getAccounts() {
+		List<Account> list = new ArrayList<Account>();
+		for (int i = 0; i < 10; i++) {
+			Account account = new Account();
+			account.setId(i);
+			account.setName("Jonathan-"+i);
+			account.setEmail("mohistzh@gmail.com-"+i);
+			account.setAddress("Shanghai, China-"+i);
+			list.add(account);
+		}
+		return list;
 	}
 }
