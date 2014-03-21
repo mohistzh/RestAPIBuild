@@ -5,16 +5,16 @@
 <web-app>
   <display-name>Restful Web Application</display-name>
   <servlet>
-  	<servlet-name>HelloApp</servlet-name>
+  	<servlet-name>MainApp</servlet-name>
   	<servlet-class>org.apache.wink.server.internal.servlet.RestServlet</servlet-class>
   	<init-param>
   		<param-name>javax.ws.rs.Application</param-name>
-  		<param-value>me.jonathan.api.application.HelloApplication</param-value>
+  		<param-value>me.jonathan.api.application.MainApplication</param-value>
   	</init-param>
   	<load-on-startup>1</load-on-startup>
   </servlet>
   <servlet-mapping>
-  	<servlet-name>HelloApp</servlet-name>
+  	<servlet-name>MainApp</servlet-name>
   	<url-pattern>/rest/*</url-pattern>
   </servlet-mapping>
 </web-app>

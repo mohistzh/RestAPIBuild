@@ -5,6 +5,7 @@ import java.util.Set;
 
 import javax.ws.rs.core.Application;
 
+import me.jonathan.api.resource.AccountResource;
 import me.jonathan.api.resource.HelloResource;
 
 import org.codehaus.jackson.jaxrs.JacksonJaxbJsonProvider;
@@ -15,18 +16,19 @@ import org.codehaus.jackson.xc.JaxbAnnotationIntrospector;
 
 
 /**
- * <b>Hello resource provider</b>
+ * <b>Main resources provider</b>
  *
  * @author 	Jonathan Zhang<br>
  *			mohistzh@gmail.com
  * @since   Mar 10, 2014
  * @version 0.0.1-SNAPSHOT
  */
-public class HelloApplication extends Application {
+public class MainApplication extends Application {
 	@Override
 	public Set<Class<?>> getClasses() {
 		Set<Class<?>> classes = new HashSet<Class<?>>();
 		classes.add(HelloResource.class);
+		classes.add(AccountResource.class);
 		return classes;
 	}
 	@Override

@@ -10,12 +10,12 @@ import javax.ws.rs.core.MediaType;
 
 
 /**
- * Root resource(exposed at "myresource" path)
+ * Hello resource(exposed at "hello" path)
  * @author Jonathan Zhang
  * @version 0.0.1
  *
  */
-@Path("myresource")
+@Path("hello")
 public class HelloResource {
 
 	/**
